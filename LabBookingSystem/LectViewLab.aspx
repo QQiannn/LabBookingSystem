@@ -14,6 +14,11 @@
             font-family: Lato, Montserrat;
         }
 
+        body{
+            background-color: #EEF5DB;
+            color: #000;
+        }
+
         .nav-item{
 	        font-size: 1.1em;
 	        padding: 0 10px 0 10px;
@@ -56,20 +61,16 @@
           </div>
         </nav>
         <br />
-        <center>
-        <asp:GridView ID="GridView1" runat="server" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="LabBookingData">
-            <Columns>
-                <asp:BoundField DataField="labName" HeaderText="Lab" SortExpression="labName" />
-                <asp:BoundField DataField="labLocation" HeaderText="Location" SortExpression="labLocation" />
-                <asp:BoundField DataField="labAvailability" HeaderText="Availability" SortExpression="labAvailability" />
-                <asp:BoundField DataField="labPersonInCharge" HeaderText="Person In Charge" SortExpression="labPersonInCharge" />
-                <asp:ButtonField ButtonType="Button" CommandName="Select" HeaderText="Make Booking" ShowHeader="True" Text="Book" />
-            </Columns>
-        </asp:GridView>
-        </center>
-        <div>
-            <asp:SqlDataSource ID="LabBookingData" runat="server" ConnectionString="<%$ ConnectionStrings:LabBookingsConnectionString %>" SelectCommand="SELECT [labName], [labLocation], [labAvailability], [labPersonInCharge] FROM [Lab] ORDER BY [labLocation], [labName], [labAvailability]"></asp:SqlDataSource>
-        </div>
+        <div><center>
+            <asp:GridView ID="GridView1" runat="server" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
+                <Columns>
+                    <asp:BoundField DataField="labName" HeaderText="Lab" SortExpression="labName" />
+                    <asp:BoundField DataField="labLocation" HeaderText="Location" SortExpression="labLocation" />
+                    <asp:BoundField DataField="labPersonInCharge" HeaderText="Person In Charge" SortExpression="labPersonInCharge" />
+                </Columns>
+            </asp:GridView>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:LabBookingsConnectionString %>" SelectCommand="SELECT [labName], [labLocation], [labPersonInCharge] FROM [Lab]"></asp:SqlDataSource>
+        </center></div>
     </form>
 </body>
 </html>
