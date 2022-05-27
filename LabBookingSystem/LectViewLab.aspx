@@ -41,6 +41,23 @@
             <td class="auto-style5"></td>
         </tr>
     </table>
+        <asp:Table ID="notiTable" runat="server">
+            <asp:TableRow>
+                <asp:TableCell>Sorry, we couldn't find any results</asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow>
+                <asp:TableCell>We offer other options and you might find one you like</asp:TableCell>
+            </asp:TableRow>
+        </asp:Table>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:LabBookingsConnectionString %>" SelectCommand="SELECT [labName], [labLocation], [labPersonInCharge], [labContact] FROM [Lab]"></asp:SqlDataSource>
+        <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
+            <Columns>
+                <asp:BoundField DataField="labName" HeaderText="Name" SortExpression="labName" />
+                <asp:BoundField DataField="labLocation" HeaderText="Location" SortExpression="labLocation" />
+                <asp:BoundField DataField="labPersonInCharge" HeaderText="Staff" SortExpression="labPersonInCharge" />
+                <asp:BoundField DataField="labContact" HeaderText="Contact" SortExpression="labContact" />
+            </Columns>
+        </asp:GridView>
     <br />
     <div>
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" >
