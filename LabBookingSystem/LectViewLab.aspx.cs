@@ -9,13 +9,12 @@ using System.Data.SqlClient;
 
 namespace LabBookingSystem
 {
-    public partial class ViewLab : System.Web.UI.Page
+    public partial class WebForm2 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-
 
         protected void searchBtn_Click1(object sender, EventArgs e)
         {
