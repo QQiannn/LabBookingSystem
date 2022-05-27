@@ -1,90 +1,12 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminInsertLab.aspx.cs" Inherits="LabBookingSystem.AdminInsertLab" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AdminMasterPage.Master" AutoEventWireup="true" CodeBehind="AdminInsertLab.aspx.cs" Inherits="LabBookingSystem.WebForm1" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
-<%@ Register assembly="System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" namespace="System.Web.UI.DataVisualization.Charting" tagprefix="asp" %>
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>Home</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <script src="js/bootstrap.min.js" type="text/javascript"></script>
-    <style type="text/css">
-        *{
-            font-family: Lato, Montserrat, Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body{
-            background-color: #EEF5DB;
-            color: #000;
-        }
-
-        input, option, .dropDown{
-            font-size: 0.9em;
-            font-family: Lato, Montserrat, Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        .nav-item{
-	        font-size: 1.1em;
-	        padding: 0 20px 0 20px;
-            color: #fff;
-            font-weight: 600;
-        }
-
-        .navbar-light{
-            background-color: #054A91;
-        }
-
-        .auto-style1 {
-            width: 267px;
-        }
-
-        .auto-style2 {
-            width: 12px;
-        }
-        .auto-style3 {
-            width: 267px;
-            height: 37px;
-        }
-        .auto-style4 {
-            width: 12px;
-            height: 37px;
-        }
-        .auto-style5 {
-            height: 37px;
-        }
-
-    </style>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <nav class="navbar navbar-expand-lg navbar-light">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#" style="color:#fff;">Lab Booking System</a>
-            <button class="navbar-toggler" type="button" data-coreui-toggle="collapse" data-coreui-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-              <ul class="navbar-nav ms-auto mt-2 mt-md-0">
-                <li class="nav-item">
-                    <asp:HyperLink  id="h1" runat="server" Text="Lab Information"></asp:HyperLink>
-                </li>
-                <li class="nav-item">
-                    <asp:HyperLink  id="HyperLink1" runat="server" Text="View Bookings"></asp:HyperLink>
-                </li>
-                <li class="nav-item">
-                    <asp:HyperLink  id="h3" runat="server" Text="Log Out"></asp:HyperLink>
-                        
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-        
-        <div>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div>
         <table style="width:90%; margin: 20px;">
             <tr>
-                <td colspan="4"><center>INSERT NEW LAB INFORMATION</center></td>
+                <td colspan="4"><center><strong>INSERT NEW LAB INFORMATION</strong></center></td>
             </tr>
             <tr>
                 <td class="auto-style1">Lab Name</td>
@@ -133,7 +55,7 @@
             <tr>
                 <td class="auto-style1" colspan="2">&nbsp;</td>
                 <td colspan="2">
-                    <asp:Button ID="addBtn" runat="server" OnClick="addBtn_Click" Text="Add Lab" />
+                    <asp:Button ID="addBtn" runat="server" OnClick="addBtn_Click" Text="Add Lab" CssClass="btn btn-primary" />
                 </td>
             </tr>
             <tr>
@@ -169,7 +91,4 @@
         <div>
             <asp:SqlDataSource ID="LabBookingData" runat="server" ConnectionString="<%$ ConnectionStrings:LabBookingsConnectionString %>" SelectCommand="SELECT [labName], [labLocation] FROM [Lab]"></asp:SqlDataSource>
         </div>
-    </form>
-</body>
-</html>
-
+</asp:Content>

@@ -8,9 +8,10 @@ using System.Configuration;
 using System.Data.Sql;
 using System.Data.SqlClient;
 
+
 namespace LabBookingSystem
 {
-    public partial class AdminInsertLab : System.Web.UI.Page
+    public partial class WebForm1 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

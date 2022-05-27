@@ -1,0 +1,50 @@
+﻿* {
+    font-family: Lato, Montserrat, Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #EEF5DB;
+    color: #000;
+}
+
+input, option, .dropDown {
+    font-size: 1.0em;
+    font-family: Lato, Montserrat, Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav-item {
+    font-size: 1.1em;
+    padding: 0 20px 0 20px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.navbar-light {
+    background-color: #054A91;
+}
+
+.auto-style1 {
+    width: 267px;
+}
+
+.auto-style2 {
+    width: 12px;
+}
+
+.auto-style3 {
+    width: 267px;
+    height: 37px;
+}
+
+.auto-style4 {
+    width: 12px;
+    height: 37px;
+}
+
+.auto-style5 {
+    height: 37px;
+}
+
+.btn-primary{
+    background: #054A91;
+}
