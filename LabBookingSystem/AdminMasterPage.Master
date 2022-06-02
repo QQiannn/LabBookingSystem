@@ -23,13 +23,13 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                   <ul class="navbar-nav ms-auto mt-2 mt-md-0">
                     <li class="nav-item">
-                        <asp:HyperLink  id="h1" runat="server" Text="Lab Information"></asp:HyperLink>
+                        <asp:HyperLink  id="h1" runat="server" Text="Lab Information" CssClass="links" ></asp:HyperLink>
                     </li>
                     <li class="nav-item">
-                        <asp:HyperLink  id="HyperLink1" runat="server" Text="View Bookings"></asp:HyperLink>
+                        <asp:HyperLink  id="HyperLink1" runat="server" Text="View Bookings" CssClass="links" NavigateUrl="~/AdminViewLab.aspx"></asp:HyperLink>
                     </li>
                     <li class="nav-item">
-                        <asp:HyperLink  id="h3" runat="server" Text="Log Out"></asp:HyperLink>
+                        <asp:HyperLink  id="h3" runat="server" CssClass="links" Text="Log Out"></asp:HyperLink>
                         
                     </li>
                   </ul>

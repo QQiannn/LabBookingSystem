@@ -21,7 +21,7 @@ namespace LabBookingSystem
         protected void addBtn_Click(object sender, EventArgs e)
         {
             SqlCommand cmd;
-            SqlConnection conn = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=LabBookings;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=Lab;Integrated Security=True");
 
             conn.Open();
             cmd = new SqlCommand("INSERT INTO Lab (labName, labLocation, labPersonInCharge, labContact) VALUES (@name, @location, @pic, @contact)", conn);

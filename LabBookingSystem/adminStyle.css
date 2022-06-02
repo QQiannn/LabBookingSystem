@@ -48,3 +48,17 @@ input, option, .dropDown {
 .btn-primary{
     background: #054A91;
 }
+
+a{
+    text-decoration: none;
+    font-size: 0.9em;
+    padding: 0 20px 0 20px;
+    color: #fff;
+    font-weight: 600;
+}
+
+a:hover{
+    color: #f8e5a2;
+    font-weight: 800;
+    text-decoration: underline;
+}

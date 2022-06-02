@@ -33,7 +33,7 @@
             <td class="auto-style11">Search</td>
             <td class="auto-style12">
                 <asp:TextBox ID="searchTxtBox" runat="server" Height="33px" Width="355px"></asp:TextBox>
-                <asp:Button ID="searchBtn" runat="server" Text="Search" CssClass="btn, btn-primary" OnClick="searchBtn_Click1" />
+                <asp:Button ID="searchBtn" runat="server" Text="Search" CssClass="btn btn-primary" OnClick="searchBtn_Click1" />
                 </td>
             <td class="auto-style12"></td>
             <td class="auto-style13">
