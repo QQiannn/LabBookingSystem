@@ -17,8 +17,8 @@
             <td class="auto-style5">Search by</td>
             <td class="auto-style8">
                 <asp:DropDownList ID="searchDropDown" runat="server">
+                    <asp:ListItem>ID</asp:ListItem>
                     <asp:ListItem>Name</asp:ListItem>
-                    <asp:ListItem>Location</asp:ListItem>
                 </asp:DropDownList>
             </td>
             <td class="auto-style8">
@@ -49,37 +49,20 @@
                 <asp:TableCell>We offer other options and you might find one you like</asp:TableCell>
             </asp:TableRow>
         </asp:Table>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:LabBookingsConnectionString %>" SelectCommand="SELECT [labName], [labLocation], [labPersonInCharge], [labContact] FROM [Lab]"></asp:SqlDataSource>
-        <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:LabBookingsConnectionString %>" SelectCommand="SELECT * FROM [Lab]"></asp:SqlDataSource>
+        <br />
+        <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" DataKeyNames="labID">
             <Columns>
+                <asp:BoundField DataField="labID" HeaderText="ID" SortExpression="labID" ReadOnly="True" />
                 <asp:BoundField DataField="labName" HeaderText="Name" SortExpression="labName" />
-                <asp:BoundField DataField="labLocation" HeaderText="Location" SortExpression="labLocation" />
-                <asp:BoundField DataField="labPersonInCharge" HeaderText="Staff" SortExpression="labPersonInCharge" />
-                <asp:BoundField DataField="labContact" HeaderText="Contact" SortExpression="labContact" />
+            </Columns>
+        </asp:GridView>
+        <asp:GridView ID="GridView1" runat="server">
+            <Columns>
             </Columns>
         </asp:GridView>
     <br />
+    <asp:Button runat="server" ID="bookBtn" CssClass="btn btn-primary btn-lg" Text="Make Booking" OnClick="bookBtn_Click"/>
     <div>
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" >
-        <Columns>
-                <asp:BoundField DataField="labName" HeaderText="Name" 
-                SortExpression="labName" ReadOnly="True" >
-                <ControlStyle BorderStyle="Solid" />
-                <ItemStyle BorderStyle="Solid" />
-                </asp:BoundField>
-                <asp:BoundField DataField="labLocation" HeaderText="Location" 
-                SortExpression="labLocation" >
-                <ItemStyle BorderStyle="Solid" />
-                </asp:BoundField>
-                <asp:BoundField DataField="labPersonInCharge" HeaderText="Staff" 
-                SortExpression="labPersonInCharge" >
-                <ItemStyle BorderStyle="Solid" />
-                </asp:BoundField>
-                <asp:BoundField DataField="labContact" HeaderText="Contact" 
-                SortExpression="labContact" >
-                <ItemStyle BorderStyle="Solid" />
-                </asp:BoundField>
-        </Columns>
-        </asp:GridView>
     </div></center>
 </asp:Content>

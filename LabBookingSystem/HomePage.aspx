@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Home</title>
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
     <style>
@@ -20,7 +20,7 @@
         .header{
             width: 100%;
             background: #0d2571;
-            font-size: 1.4em;
+            font-size: 2.0em;
             color: #ffffff;
         }
 

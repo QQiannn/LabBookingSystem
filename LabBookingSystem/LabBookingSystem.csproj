@@ -107,10 +107,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="AdminBookings.aspx" />
     <Content Include="AdminDelete.aspx" />
     <Content Include="AdminLogin.aspx" />
     <Content Include="AdminUpdate.aspx" />
-    <Content Include="AdminViewBookings.aspx" />
+    <Content Include="check.png" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -161,6 +162,7 @@
     <Content Include="css\bootstrap.rtl.css.map" />
     <Content Include="css\bootstrap.rtl.min.css.map" />
     <Content Include="HomePage.aspx" />
+    <Content Include="LectBookLab.aspx" />
     <Content Include="LectLogin.aspx" />
     <Content Include="js\bootstrap.bundle.js.map" />
     <Content Include="js\bootstrap.bundle.min.js.map" />
@@ -172,6 +174,7 @@
     <Content Include="AdminInsertLab.aspx" />
     <Content Include="LectSignUp.aspx" />
     <Content Include="LecturerMasterPage.Master" />
+    <Content Include="LectViewBookings.aspx" />
     <Content Include="LectViewLab.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="js\bootstrap.bundle.js" />
@@ -218,6 +221,13 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminBookings.aspx.cs">
+      <DependentUpon>AdminBookings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminBookings.aspx.designer.cs">
+      <DependentUpon>AdminBookings.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdminDelete.aspx.cs">
       <DependentUpon>AdminDelete.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -238,13 +248,6 @@
     </Compile>
     <Compile Include="AdminUpdate.aspx.designer.cs">
       <DependentUpon>AdminUpdate.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="AdminViewBookings.aspx.cs">
-      <DependentUpon>AdminViewBookings.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AdminViewBookings.aspx.designer.cs">
-      <DependentUpon>AdminViewBookings.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
@@ -279,6 +282,13 @@
     <Compile Include="HomePage.aspx.designer.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="LectBookLab.aspx.cs">
+      <DependentUpon>LectBookLab.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LectBookLab.aspx.designer.cs">
+      <DependentUpon>LectBookLab.aspx</DependentUpon>
+    </Compile>
     <Compile Include="LectLogin.aspx.cs">
       <DependentUpon>LectLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -299,6 +309,13 @@
     </Compile>
     <Compile Include="LecturerMasterPage.Master.designer.cs">
       <DependentUpon>LecturerMasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="LectViewBookings.aspx.cs">
+      <DependentUpon>LectViewBookings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LectViewBookings.aspx.designer.cs">
+      <DependentUpon>LectViewBookings.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">

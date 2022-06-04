@@ -7,11 +7,12 @@ using System.Web.UI.WebControls;
 
 namespace LabBookingSystem
 {
-    public partial class LectViewBookings : System.Web.UI.Page
-    {
-        protected void Page_Load(object sender, EventArgs e)
-        {
+	public partial class LectViewBookings : System.Web.UI.Page
+	{
+		protected void Page_Load(object sender, EventArgs e)
+		{
 
-        }
-    }
+		}
+
+	}
 }

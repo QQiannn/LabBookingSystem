@@ -22,21 +22,21 @@ namespace LabBookingSystem
             SqlCommand cmd, cmd2;
             String str, str2;
 
-            if (searchDropDown.SelectedValue == "Name")
+            if (searchDropDown.SelectedValue == "ID")
             {
-                str = "SELECT labName, labLocation, labPersonInCharge, labContact FROM Lab WHERE labName LIKE '%' + @search + '%'";
-                str2 = "SELECT COUNT(labName) FROM Lab WHERE labName LIKE '%' + @search + '%'";
+                str = "SELECT * FROM Lab WHERE labID LIKE '%' + @search + '%'";
+                str2 = "SELECT COUNT(labID) FROM Lab WHERE labID LIKE '%' + @search + '%'";
             }
             else
             {
-                str2 = "SELECT COUNT(labLocation) FROM Lab WHERE labName LIKE '%' + @search + '%'";
-                str = "SELECT labName, labLocation, labPersonInCharge, labContact FROM Lab WHERE labLocation LIKE '%' + @search + '%'";
+                str2 = "SELECT COUNT(labName) FROM Lab WHERE labName LIKE '%' + @search + '%'";
+                str = "SELECT * FROM Lab WHERE labName LIKE '%' + @search + '%'";
             }
 
             cmd = new SqlCommand(str, conn);
             cmd2 = new SqlCommand(str2, conn);
-            cmd.Parameters.Add("@search", SqlDbType.NVarChar).Value = searchTxtBox.Text;
-            cmd2.Parameters.Add("@search", SqlDbType.NVarChar).Value = searchTxtBox.Text;
+            cmd.Parameters.Add("@search", SqlDbType.VarChar).Value = searchTxtBox.Text;
+            cmd2.Parameters.Add("@search", SqlDbType.VarChar).Value = searchTxtBox.Text;
 
             conn.Open();
             cmd.ExecuteNonQuery();
@@ -57,21 +57,27 @@ namespace LabBookingSystem
 
                 DataSet ds = new DataSet();
 
-                if (searchDropDown.SelectedValue == "Name")
+                if (searchDropDown.SelectedItem.Equals("Lab ID"))
                 {
-                    da.Fill(ds, "labName");
+                    da.Fill(ds, "labID");
                 }
                 else
                 {
-                    da.Fill(ds, "labLocation");
+                    da.Fill(ds, "labName");
                 }
 
+                GridView1.Visible = true;
                 GridView1.DataSource = ds;
                 GridView1.DataBind();
                 conn.Close();
             }
 
             
+        }
+
+        protected void bookBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("LectBookLab.aspx");
         }
     }
 }

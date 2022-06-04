@@ -16,7 +16,7 @@ namespace LabBookingSystem
         {
             if (Session["uid"] != null)
             {
-                Response.Redirect("AdminViewLab.aspx");
+                Response.Redirect("AdminInsertLab.aspx");
             }
         }
 
@@ -30,7 +30,7 @@ namespace LabBookingSystem
 
             if (DT.Rows.Count > 0)
             {
-                Response.Redirect("AdminViewLab.aspx");
+                Response.Redirect("AdminInsertLab.aspx");
             }
             else
             {

@@ -50,6 +50,7 @@ namespace LabBookingSystem
 
             if (DT.Rows.Count > 0)
             {
+                Session["uid"] = TextBox1.Text;
                 Response.Redirect("LectViewLab.aspx");
             }
             else

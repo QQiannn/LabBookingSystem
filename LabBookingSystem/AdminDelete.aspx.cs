@@ -24,10 +24,11 @@ namespace LabBookingSystem
             conn = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=LabBookings;Integrated Security=True");
             conn.Open();
 
-            cmd = new SqlCommand("Delete from Lab WHERE [labID] =  '" + TextBox1.Text + "'", conn);
+            cmd = new SqlCommand("Delete from Bookings WHERE [bookingID] =  '" + TextBox1.Text + "'", conn);
             cmd.ExecuteNonQuery();
             Label1.Text = "Data successfully deleted";
             TextBox1.Text = "";
+            GridView1.DataBind();
             conn.Close();
         }
     }

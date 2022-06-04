@@ -11,7 +11,7 @@ namespace LabBookingSystem
 {
 
 
-    public partial class LectViewBookings
+    public partial class AdminBookings
     {
 
         /// <summary>

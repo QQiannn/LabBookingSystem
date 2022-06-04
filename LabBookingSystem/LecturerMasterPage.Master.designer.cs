@@ -51,13 +51,13 @@ namespace LabBookingSystem
         protected global::System.Web.UI.WebControls.HyperLink h2;
 
         /// <summary>
-        /// h3 control.
+        /// logOutBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink h3;
+        protected global::System.Web.UI.WebControls.Button logOutBtn;
 
         /// <summary>
         /// ContentPlaceHolder1 control.

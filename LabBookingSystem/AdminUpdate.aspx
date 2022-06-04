@@ -5,9 +5,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <link href="adminStyle.css" rel="stylesheet" type="text/css" />
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <link href="adminStyle.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
         .auto-style1 {
             width: 100%;
@@ -15,9 +15,6 @@
         .auto-style3 {
             height: 39px;
             background-color: #054A91;
-        }
-        .auto-style7 {
-            color: #FFFFFF;
         }
         .auto-style9 {
             width: 372px;
@@ -56,6 +53,20 @@
             width: 372px;
             background-color: #EEF5DB;
             height: 25px;
+        }
+
+        .links{
+            text-decoration: none;
+            font-size: 0.9em;
+            padding: 0 20px 0 20px;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .links:hover {
+            color: #f8e5a2;
+            font-weight: 800;
+            text-decoration: underline;
         }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -118,13 +129,13 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                   <ul class="navbar-nav ms-auto mt-2 mt-md-0">
                     <li class="nav-item">
-                        <asp:HyperLink  id="h1" runat="server" Text="Lab Information"></asp:HyperLink>
+                        <asp:HyperLink  id="h1" runat="server" Text="Lab Information" CssClass="links" NavigateUrl="~/AdminInsertLab.aspx"></asp:HyperLink>
                     </li>
                     <li class="nav-item">
-                        <asp:HyperLink  id="HyperLink1" runat="server" Text="View Bookings"></asp:HyperLink>
+                        <asp:HyperLink  id="HyperLink1" runat="server" Text="View Bookings" CssClass="links" NavigateUrl="~/AdminBookings.aspx"></asp:HyperLink>
                     </li>
                     <li class="nav-item">
-                        <asp:HyperLink  id="h3" runat="server" Text="Log Out"></asp:HyperLink>
+                        <asp:Button ID="logOutBtn"  runat="server" Text="Log Out" CssClass="links btn btn-primary" OnClick="logOutBtn_Click" BorderStyle="None"></asp:Button>                       
                         
                     </li>
                   </ul>
@@ -190,7 +201,7 @@
                 <td class="auto-style18">&nbsp;</td>
                 <td class="auto-style14">Lab:</td>
                 <td class="auto-style14">
-                    <asp:DropDownList ID="DropDownList1" runat="server" Width="167px" Height="19px">
+                    <asp:DropDownList ID="DropDownList1" runat="server" Width="167px" Height="19px" DataSourceID="SqlDataSource1" DataTextField="labName" DataValueField="labName">
                     <asp:ListItem Selected = "True" Text = "" Value = ""></asp:ListItem>
                             <asp:ListItem>Operating System</asp:ListItem>
                             <asp:ListItem>Digital Media </asp:ListItem>
@@ -198,6 +209,7 @@
                             <asp:ListItem>Cisco </asp:ListItem>
                             <asp:ListItem>Web Intelligence</asp:ListItem>
                     </asp:DropDownList>
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:LabBookingsConnectionString %>" SelectCommand="SELECT [labName] FROM [Lab]"></asp:SqlDataSource>
                 </td>
                 <td class="auto-style18">
                     &nbsp;</td>
@@ -263,10 +275,10 @@
                 <td class="auto-style17">
                     </td>
                 <td class="auto-style16">
-                    <asp:Button ID="Button1" runat="server" Text="Update" OnClick="Button1_Click" />
+                    <asp:Button ID="Button1" runat="server" Text="Update" OnClick="Button1_Click" CssClass="btn btn-primary" />
                 </td>
                 <td class="auto-style16">
-                    <asp:Button ID="Button2" runat="server" Text="Delete" OnClick="Button2_Click" />
+                    <asp:Button ID="Button2" runat="server" Text="Delete" OnClick="Button2_Click" CssClass="btn btn-danger" />
                 </td>
                 <td class="auto-style17">
                     </td>

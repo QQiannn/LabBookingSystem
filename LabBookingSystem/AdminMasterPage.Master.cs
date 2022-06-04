@@ -13,5 +13,11 @@ namespace LabBookingSystem
         {
 
         }
+
+        protected void logOutBtn_Click(object sender, EventArgs e)
+        {
+            Session.RemoveAll();
+            Response.Redirect("HomePage.aspx");
+        }
     }
 }
